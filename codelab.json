@@ -1,0 +1,28 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-06-07T11:13:39+02:00",
+  "id": "dam-exam-june-2122",
+  "duration": 0,
+  "title": "Partial Exam 2021-2022 DA (June)",
+  "authors": "Jordi Mateo",
+  "summary": "Partial Exam 2021-2022 DA (June)",
+  "source": "dam-exam-june-2122.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "andorid",
+    "course",
+    "dam",
+    "java",
+    "learing"
+  ],
+  "url": "dam-exam-june-2122"
+}

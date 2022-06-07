@@ -1,0 +1,157 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Partial Exam 2021-2022 DA (June)</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="dam-exam-june-2122"
+                  title="Partial Exam 2021-2022 DA (June)"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Overview" duration="0">
+        <p>We present in this code lab the statement for the live-coding exam to pass course 102386-DAM. The students have two hours to accomplish 5 points by solving the different challenges proposed.</p>
+<p class="image-container"><img alt="exam-theme" src="img/e2fa8503a4137d1b.png"></p>
+<h2 is-upgraded>Rules and constraints</h2>
+<ul>
+<li>You are allowed to check the internet and class notes.</li>
+<li>You are not allowed to share information using any media.</li>
+<li>If plagiarism is detected in two or more students, all involved students will fail the test with a 0.</li>
+<li>To deliver the exam, students must present a pull request to the GitHub repository with the following information: <em>SurnameName</em>.</li>
+</ul>
+<p class="image-container"><img alt="course-logo" src="img/e3404953b0e88a84.svg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Pre-requisits" duration="0">
+        <ul>
+<li>Android Studio</li>
+<li>Git and Github</li>
+</ul>
+<h2 is-upgraded>Roadmap</h2>
+<ol type="1">
+<li>Navigate to the <a href="https://github.com/102386-DAM/Partial-Exam-2021-2022-DAM-June" target="_blank">exam public repository</a>.</li>
+<li>Fork the repository (clicking on the fork button).</li>
+<li>Clone your fork into your laptop and start working with it.</li>
+<li>Commit changes after solving each challenge proposed. (In another case, it will penalise you with -0.5 points in your final mark).</li>
+<li>Push all the commits into your cloud repository.</li>
+<li>Navigate to your cloud repository and click the button pull request.</li>
+<li>Compare across forks. The base repo points to my repository and the head to your solution.</li>
+<li>Add a title and description for the pull request.</li>
+<li>Create the pull request to finish the test.</li>
+</ol>
+<h2 is-upgraded>Additional information</h2>
+<ul>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork" target="_blank">How to create a pull request</a>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Correcting bugs (2 points)" duration="0">
+        <p><em>Required</em></p>
+<p>Software bugs are inconvenient and potentially expensive. The exam repository contains some bugs and errors you need to correct. <em>This step is required to perform the others. If you cannot fix the issues, you fail the exam</em>. You can use:</p>
+<ul>
+<li>Log information (LogCat)</li>
+<li>Runtime information  (Run)</li>
+</ul>
+<p><strong>Bug1. Compilation Time</strong><img alt="Bug1. Compilation Time" src="img/2ef334a73babbe73.png"></p>
+<p><strong>Bug2. Run Time when click the 1 button</strong><img alt="Bug2. Run Time when click the 1 button" src="img/e67521587a27733e.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Infinite lives (2 points)" duration="0">
+        <p><em>Easy</em></p>
+<p>Implement a function that reads an integer from the Shared Memory (key: lives)  and increments its value by one unit when the user clicks the button (id: purchaseLivesBt). This way, the TextView (id:livesTv) must be updated each time the user clicks on the button.</p>
+<p>Notes:</p>
+<ul>
+<li>Parameter lives must be inited to 0 value at LauncherActivity.</li>
+<li>Databinding is required.</li>
+</ul>
+<p class="image-container"><img alt="ScreenShoot1" src="img/314d7e5eb2b81ac.png"><img alt="ScreenShoot2" src="img/20564fbcd43a9bf1.png"><img alt="ScreenShoot3" src="img/d366185c1b0cd2ac.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="No lives No game (2 points)" duration="0">
+        <p><em>Easy</em></p>
+<p>Implement a function that disables the gameplay when the user losses all his lifes.</p>
+<p>Notes:</p>
+<ul>
+<li>Disabling the buttons is enough; it is NOT required any kind of user notification (Dialogs, Toast,...).</li>
+</ul>
+<p><strong>Extra (0.5 points)</strong>: Disable the button (mathAdventureButton) either when no more levels are available or when the user losses all their lifes.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="3 lives per day (1 points)" duration="0">
+        <p>Implement a method to ensure that a user starts with three lives in the game each day. It does not matter how many lives it lost the previous day.</p>
+<p><strong>Note</strong>: You can use this function to compare two dates.</p>
+<pre><code language="language-java" class="language-java">public static boolean isSameDay(Date date1, Date date2) {
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(date1);
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.setTime(date2);
+        return calendar1.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR)
+            &amp;&amp; calendar1.get(Calendar.MONTH) == calendar2.get(Calendar.MONTH)
+            &amp;&amp; calendar1.get(Calendar.DAY_OF_MONTH) 
+                == calendar2.get(Calendar.DAY_OF_MONTH);
+    }
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Resetting the game play (0.5 points)" duration="0">
+        <p><em>Easy</em></p>
+<p>Implement a button in Adventure View that allows the user to reset the sharedPreferences (key=current_level) to 0 value.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="GamePlay modes (4 point)" duration="0">
+        <p><em>Medium</em></p>
+<p>Implement three different modes (easy, medium and hard). To do it, you must generate 3 buttons in game_layout.xml (easyBt, mediumBt, HardBt).</p>
+<p class="image-container"><img alt="game-play-modes" src="img/9d559e9b54eadcc8.png"></p>
+<p>Notes:</p>
+<ul>
+<li>Make it simple. You can reuse all the code and classes.</li>
+<li>It is forbidden to create more layout files. You need to reuse the provided ones.</li>
+<li>Use data binding to link the buttons with the different modes.</li>
+</ul>
+<p class="image-container"><img alt="game-play-modes" src="img/b59e74fe9a814fcb.png"><img alt="game-play-modes" src="img/8ac96bbf68c02bcb.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
